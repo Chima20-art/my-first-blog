@@ -1,4 +1,6 @@
 import Nav from "./Nav";
+import Header from "./header";
+
 import styles from "../styles/Layout.module.css";
 
 const layout = ({ children }) => {
@@ -6,7 +8,10 @@ const layout = ({ children }) => {
     <>
       <Nav />
       <div className={styles.container}>
-        <main className={styles.main}>{children}</main>
+        <main className={styles.main}>
+          <Header />
+          {children}
+        </main>
       </div>
     </>
   );
