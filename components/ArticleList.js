@@ -1,5 +1,12 @@
 import articleStyles from "../styles/Article.module.css";
 
-export const ArticleList = () => {
-  return <div></div>;
+const ArticleList = ({ articles }) => {
+  return (
+    <div className={articleStyles.grid}>
+      {articles.map((article) => (
+        <h3 key={article.title}>{article.title}</h3>
+      ))}
+    </div>
+  );
 };
+export default ArticleList;
